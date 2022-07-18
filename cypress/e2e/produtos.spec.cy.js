@@ -10,7 +10,7 @@ describe('Funcionalidade Página de Produtos', () => {
     cy.get('.product-block').eq(7).click()
   });
 
-  it.only('deve adicionar um produto ao carrinho', () => {
+  it('deve adicionar um produto ao carrinho', () => {
     var quantidade = 4
 
     cy.get('.product-block').eq(3).click()
@@ -20,7 +20,12 @@ describe('Funcionalidade Página de Produtos', () => {
     cy.get('.single_add_to_cart_button').click()
 
     cy.get('.dropdown-toggle > .mini-cart-items').should('contain', quantidade)
-    cy.get('.woocommerce-message').should('contain', quantidade +' × “Ajax Full-Zip Sweatshirt” foram adicionados no seu carrinho.')
+    cy.get('.woocommerce-message').should('contain', quantidade + ' × “Ajax Full-Zip Sweatshirt” foram adicionados no seu carrinho.')
+  });
+
+  it.only('deve adicionar produtos ao carrinho - usando comando customizado', () => {
+    cy.addprodutos(2)
+
   });
 
 });

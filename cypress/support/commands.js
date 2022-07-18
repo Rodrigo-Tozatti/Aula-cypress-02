@@ -30,3 +30,26 @@ Cypress.Commands.add('login', (usuario, senha) => {
     cy.get('.woocommerce-form > .button').click()
 
 })
+
+Cypress.Commands.add('precadastro', (email, senha, nome, sobrenome) => {
+    cy.get('#reg_email').type(email)
+    cy.get('#reg_password').type(senha)
+    cy.get(':nth-child(4) > .button').click()
+
+    cy.get('.woocommerce-MyAccount-navigation-link--edit-account > a').click()
+    cy.get('#account_first_name').type(nome)
+    cy.get('#account_last_name').type(sobrenome)
+    cy.get('.woocommerce-Button').click()
+
+})
+
+Cypress.Commands.add('addprodutos', (quantidade) => {
+    cy.get('.product-block').eq(3).click()
+    cy.get('.button-variable-item-M').click()
+    cy.get('.button-variable-item-Blue').click()
+    cy.get('.input-text').clear().type(quantidade)
+    cy.get('.single_add_to_cart_button').click()
+
+    cy.get('.dropdown-toggle > .mini-cart-items').should('contain', quantidade)
+    cy.get('.woocommerce-message').should('contain', quantidade + ' × “Ajax Full-Zip Sweatshirt” foram adicionados no seu carrinho.')
+})

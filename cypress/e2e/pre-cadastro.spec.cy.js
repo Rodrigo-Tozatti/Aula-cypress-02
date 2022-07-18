@@ -25,5 +25,12 @@ describe('funcionalidade pre cadasteo', () => {
 
     cy.get('.woocommerce-message').should('contain' , 'Detalhes da conta modificados com sucesso.')
   });
+
+    it.only('Deve completar o pre-cadastro com sucesso utilizando comandos customizados', () => {
+      var emailFaker2 = faker.internet.email()
+      cy.precadastro(emailFaker2, 'senha!@forte', 'Rodrigo', 'Tozatti')
+
+      cy.get('.woocommerce-message').should('contain' , 'Detalhes da conta modificados com sucesso.')
+    });
   
 });
