@@ -1,0 +1,45 @@
+[
+    {
+        "nome": "Rodrigo",
+        "sobrenome": "Tozatti",
+        "empresa": "Superbite",
+        "pais": "Brasil",
+        "endereco": "Amador Bueno, 256",
+        "complemento": "Apto. 204",
+        "cidade": "Londrina",
+        "estado": "Paraná",
+        "cep": "86160-000",
+        "telefone": "(43) 99954-3346",
+        "email": "rodrigo@rodrigo.com"
+    },
+    
+    {
+        "nome": "Rafael",
+        "sobrenome": "Silva",
+        "empresa": "Adoper",
+        "pais": "Brasil",
+        "endereco": "Souza Naves, 567",
+        "complemento": "Loja 102",
+        "cidade": "Londrina",
+        "estado": "Paraná",
+        "cep": "86160-000",
+        "telefone": "(43) 99954-6578",
+        "email": "rafael@rafael.com"
+    },
+
+    {
+        "nome": "Thiago",
+        "sobrenome": "Medeiros",
+        "empresa": "Orbit",
+        "pais": "Brasil",
+        "endereco": "Minas Gerais",
+        "complemento": "Sala 03",
+        "cidade": "Londrina",
+        "estado": "Paraná",
+        "cep": "86160-000",
+        "telefone": "(43) 99344-3346",
+        "email": "Thiago@thiago.com"
+    }
+
+
+]
