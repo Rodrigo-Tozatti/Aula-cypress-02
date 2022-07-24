@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
 
     "cy:run": "npx cypress run --browser chrome",
-    "cy:open": "npx cypress open --browser chrome"
+    "cy:open": "npx cypress open --browser chrome",
+    "cy:report": "cypress run --record --key aa51fec9-f6ff-40dc-a530-bfa9d37259e5"
 
   },
   "repository": {
